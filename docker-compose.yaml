@@ -3,10 +3,12 @@ services:
   jenkins:
     image: jenkins/jenkins:latest
     container_name: jenkins
-    user: jenkins
+    user: root
     volumes:
       - jenkins-data-volume:/var/jenkins_home
       - /usr/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/run/docker.sock
+
     environment:
       JENKINS_HOST_HOME: "/data/jenkins"
     ports:
