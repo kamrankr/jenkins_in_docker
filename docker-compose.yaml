@@ -1,0 +1,18 @@
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:latest
+    container_name: jenkins
+    user: jenkins
+    volumes:
+      - jenkins-data-volume:/var/jenkins_home
+      - /usr/bin/docker:/usr/bin/docker
+    environment:
+      JENKINS_HOST_HOME: "/data/jenkins"
+    ports:
+      - "8080:8080"
+      - "5000:5000"
+      - "50000:50000"
+
+volumes:
+  jenkins-data-volume:
