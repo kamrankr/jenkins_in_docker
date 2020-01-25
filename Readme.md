@@ -13,4 +13,4 @@ Issues on docker socket permission
 - usermod -a -G docker jenkins
 - chown root:jenkins /var/run/docker.sock 
 
-From host machine where docker is running restart docker
+From host machine where docker is running restart docker  
