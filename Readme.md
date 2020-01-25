@@ -15,4 +15,3 @@ Issues on docker socket permission
 
 From host machine where docker is running restart docker
 
-Test changes
